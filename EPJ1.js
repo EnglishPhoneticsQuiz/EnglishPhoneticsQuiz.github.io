@@ -151,10 +151,7 @@ function lettershould() {
 	if ( document.getElementById("transcription").innerHTML == "&nbsp;") {document.getElementById("transcription").innerHTML = '&#x28a;'; } else {
 	document.getElementById("transcription").innerHTML += '&#x28a;';
 }};
-function letterU() {
-	if ( document.getElementById("transcription").innerHTML == "&nbsp;") {document.getElementById("transcription").innerHTML = 'u'; } else {
-	document.getElementById("transcription").innerHTML += 'u';
-}};
+
 function letterApostrofo() {
 	if ( document.getElementById("transcription").innerHTML == "&nbsp;") {document.getElementById("transcription").innerHTML = '&#x2c8;'; } else {
 	document.getElementById("transcription").innerHTML += '&#x2c8;';
