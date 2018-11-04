@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta name="author" content="Sergio Martinelli" />
+	<meta name="description" content="Web page at free disposal for exercising the English phonetic pronunciation" />
+	<meta name="keywords" content="English, linguistics, phonetics, phonology, quiz, exercise, css, javascript" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<style type="text/CSS">
+	body {
+		background-color: RGB(0, 255, 0);
+	}
+	h1 {
+		color: red;
+	}
+	div.container {
+		width: 100%;
+   		margin: auto;
+	}
+	div.container2 {
+		width: 30%;
+		margin: 5px;
+		padding: 2px;
+	}
+	div.h5 {
+		width: 300px;
+   		border: 5px solid;
+   		padding: 2px;
+   		margin: 10px;
+		
+		
+	}
+	div.correctandwrong {
+		width: 200px;
+		border: 5px solid;
+		padding: 2px;
+		margin: 5px;
+		
+	}
+	div.lastDIV {
+		background-color: #2F4F4F;
+		width: 100%;
+	}
+	#transcription {
+		margin: 2px; 
+	}
+	#transcriptionshown {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	p.correct {
+		background-color: RGB(0, 222, 0);
+	}
+	p.wrong {
+		background-color: red;
+	}
+	p.normal {
+		background-color: RGB(0, 255, 0);
+	}
+		
+</style>
+	<title>English phonetics quiz</title>
+
+<script src="EPJ7.js"></script>
+<script src="EPJ8.js"></script>
+<script src="EPJ9.js"></script>
+<script src="EPJ10.js"></script>
+<script src="EPJ11.js"></script>
+<script src="EPJ12.js"></script>
+
+</head>
+	<body>
+		
+		<h1 align="center">ENGLISH PHONETICS QUIZ</h1>
+
+		<p>Instructions
+			<ol>
+				<li>Press "Next" to start and get a phonetic transcription</li>
+				<li>Guess the word related to the transcription given with the buttons	</li>				
+				<li>Submit your word in order to check if it's correct and repeat the process!				</li>
+			</ol>
+		</p>
+		<p>
+			Go to the word->transcription	<a href="https://englishphoneticsquiz.github.io">|Blue|</a>
+		</p>
+
+		<hr size="10px" color="black"></hr>
+
+	
+
+		<p id="boxes">
+		<center>
+			<div class="container">
+			
+				<div class="h5">
+					<font size="+3">transcription</font>
+					<p id="transcription">&nbsp;</p>
+				</div>
+			
+				<div class="correctandwrong">
+					<input type="button" id="checktranscription" value="Check Transcription" onclick="checktranscription()"></input>
+					<p id="correctorwrong">&nbsp;</p>
+				</div>	
+			
+			</div>
+		</center>
+		</p>
+		<p>		
+		<center>
+			<div class="container2">
+				<p id="writeaword">&nbsp;</p>
+				<p id="transcriptionshown">&nbsp;</p>
+			</div>
+		</center>
+		</p>		
+		<p>
+		<center>
+			<input type="button" name="previous" value="Previous" onclick="previoustranscription()"></input>
+			<input type="button" name="showword" value="Show Word" onclick="showtranscription()"></input>
+			<input type="button" name="clear" value="Clear Word" onclick="cleartranscription()"></input>
+			<input type="button" name="backspace" value="Backspace" onclick="backspace()"></input>
+			<input type="button" name="next" value="Next" onclick="nexttranscription()"></input>
+		</center>
+		</p>
+
+		<p>
+		<center>
+			<input type="button" name="p" value="p" onclick="letterP()"></input>
+			<input type="button" name="b" value="b" onclick="letterB()"></input>
+			<input type="button" name="t" value="t" onclick="letterT()"></input>
+			<input type="button" name="d" value="d" onclick="letterD()"></input>
+			<input type="button" name="k" value="k" onclick="letterK()"></input>
+			<input type="button" name="g" value="g" onclick="letterG()"></input>
+			<input type="button" name="f" value="f" onclick="letterF()"></input>
+			<input type="button" name="v" value="v" onclick="letterV()"></input>
+			<input type="button" name="s" value="s" onclick="letterS()"></input>
+			<input type="button" name="z" value="z" onclick="letterZ()"></input>
+			<input type="button" name="h" value="h" onclick="letterH()"></input>
+			<input type="button" name="m" value="m" onclick="letterM()"></input>
+			<input type="button" name="n" value="n" onclick="letterN()"></input>
+			<input type="button" name="l" value="l" onclick="letterL()"></input>
+			<input type="button" name="r" value="r" onclick="letterR()"></input>
+			<input type="button" name="j" value="j" onclick="letterJ()"></input>
+			<input type="button" name="w" value="w" onclick="letterW()"></input>
+			
+		</center>
+		
+		</p>
+		<p>
+		<center>
+			
+			<input type="button" name="&#x2c8;" value="&#x2c8;" onclick="letterApostrofo()"></input>
+		</center>
+		<center>
+			<input type="button" name="a" value="a" onclick="lettera()"></input>
+			
+			<input type="button" name="e" value="e" onclick="letterE()"></input>
+			
+			<input type="button" name="i" value="i" onclick="letterI()"></input>
+			<input type="button" name="o" value="o" onclick="letterO()"></input>
+			<input type="button" name="u" value="u" onclick="letterU()"></input>
+			
+		</center>
+
+		</p>
+
+		
+		<hr></hr>
+			<center>
+				<p>Developed by Sergio Martinelli</p>
+				<p>Contact email: sergio.martinelli.EPQ@gmail.com</p>
+			</center>
+		
+
+
+	</body>
+
+
+
+
+</html>
