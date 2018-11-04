@@ -1,1 +1,207 @@
-sadasd
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta name="author" content="Sergio Martinelli" />
+	<meta name="description" content="Web page at free disposal for exercising English phonetics" />
+	<meta name="keywords" content="English, linguistics, phonetics, phonology, quiz, exercise, css, javascript" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/CSS">
+	body {
+		background-color: RGB(0, 225, 255);
+	}
+	h1 {
+		color: red;
+	}
+	div.container {
+		width: 100%;
+   		margin: auto;
+	}
+	div.container2 {
+		width: 30%;
+		margin: 5px;
+		padding: 2px;
+	}
+	div.h5 {
+		width: 300px;
+   		border: 5px solid;
+   		padding: 2px;
+   		margin: 10px;
+		
+		
+	}
+	div.correctandwrong {
+		width: 200px;
+		border: 5px solid;
+		padding: 2px;
+		margin: 5px;
+		
+	}
+	div.lastDIV {
+		background-color: #2F4F4F;
+		width: 100%;
+	}
+	#transcription {
+		margin: 2px; 
+	}
+	#transcriptionshown {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	p.correct {
+		background-color: RGB(0, 222, 0);
+	}
+	p.wrong {
+		background-color: red;
+	}
+	p.normal {
+		background-color: RGB(0, 225, 255);
+	}
+	.smallbig {
+		width: 15%;
+		height: 50px; 
+		font-size: 15px;
+		
+	}
+	.small {
+		width: 80px;
+		height: 50px; 
+		font-size: 27px;
+	}
+		
+</style>
+	<title>English phonetics quiz</title>
+
+<script src="EPJ1.js"></script>
+<script src="EPJ3.js"></script>
+<script src="EPJ2.js"></script>
+<script src="EPJ4.js"></script>
+<script src="EPJ5.js"></script>
+<script src="EPJ6.js"></script>
+
+</head>
+	<body>
+		
+		<h1 align="center">ENGLISH PHONETICS QUIZ</h1>
+
+		<p>Instructions
+			<ol>
+				<li>Press "Next" to start and get a word</li>
+				<li>Guess the RP pronunciation of the word given with the buttons</li>
+				<li>Submit your transcription in order to check if it's correct and repeat the process!</li>
+			</ol>
+		</p>
+
+
+		<hr size="10px" color="black"></hr>
+
+	
+
+		<p id="boxes">
+		<center>
+			<div class="container">
+			
+				<div class="h5">
+					<font size="+3">word</font>
+					<p id="writeaword">&nbsp;</p>
+				</div>
+			
+				<div class="correctandwrong">
+					<input type="button" id="checktranscription" value="Check Transcription" onclick="checktranscription()"></input>
+					<p id="correctorwrong">&nbsp;</p>
+				</div>	
+			
+			</div>
+		</center>
+		</p>
+		<p>		
+		<center>
+			<div class="container2">
+				<p id="transcription">&nbsp;</p>
+				<p id="transcriptionshown">&nbsp;</p>
+			</div>
+		</center>
+		</p>		
+		<p>
+		<center>
+			<input type="button" class="smallbig" name="previous" value="Previous" onclick="previoustranscription()"></input>
+			<input type="button" class="smallbig" name="showtranscription" value="Show Transcription" onclick="showtranscription()"></input>
+			<input type="button" class="smallbig" name="clear" value="Clear Transcription" onclick="cleartranscription()"></input>
+			<input type="button" class="smallbig" name="backspace" value="Backspace" onclick="backspace()"></input>
+			<input type="button" class="smallbig" name="next" value="Next" onclick="nexttranscription()"></input>
+		</center>
+		</p>
+
+		<p>
+		<center>
+			<input type="button" class="small" name="p" value="p" onclick="letterP()"></input>
+			<input type="button" class="small" name="b" value="b" onclick="letterB()"></input>
+			<input type="button" class="small" name="t" value="t" onclick="letterT()"></input>
+			<input type="button" class="small" name="d" value="d" onclick="letterD()"></input>
+			<input type="button" class="small" name="k" value="k" onclick="letterK()"></input>
+			<input type="button" class="small" name="g" value="g" onclick="letterG()"></input>
+			<input type="button" class="small" name="f" value="f" onclick="letterF()"></input>
+			<input type="button" class="small" name="v" value="v" onclick="letterV()"></input>
+			<input type="button" class="small" name="s" value="s" onclick="letterS()"></input>
+			<input type="button" class="small" name="z" value="z" onclick="letterZ()"></input>
+			<input type="button" class="small" name="h" value="h" onclick="letterH()"></input>
+			<input type="button" class="small" name="m" value="m" onclick="letterM()"></input>
+			<input type="button" class="small" name="n" value="n" onclick="letterN()"></input>
+			<input type="button" class="small" name="l" value="l" onclick="letterL()"></input>
+			<input type="button" class="small" name="r" value="r" onclick="letterR()"></input>
+			<input type="button" class="small" name="j" value="j" onclick="letterJ()"></input>
+			<input type="button" class="small" name="w" value="w" onclick="letterW()"></input>
+			
+		</center>
+		<center>
+			<input type="button" class="small" name="&#x3B8;" value="&#x3B8;" onclick="letterth()"></input>
+			<input type="button" class="small" name="&#xF0;" value="&#xF0;" onclick="letterthd()"></input>
+			<input type="button" class="small" name="&#x283;" value="&#x283;" onclick="lettersh()"></input>
+			<input type="button" class="small" name="&#x292;" value="&#x292;" onclick="lettersgh()"></input>
+			<input type="button" class="small" name="&#x14B;" value="&#x14B;" onclick="lettergn()"></input>
+					
+		</center>
+		</p>
+		<p>
+		<center>
+			<input type="button" class="small" name="&#x251;&#x2d0;" value="&#x251;&#x2d0;" onclick="letterAA()"></input>
+			<input type="button" class="small" name="&#x25c;&#x2d0;" value="&#x25c;&#x2d0;" onclick="letterEE()"></input>
+			<input type="button" class="small" name="i&#x2d0;" value="i&#x2d0;" onclick="letterii()"></input>
+			<input type="button" class="small" name="&#x254;&#x2d0;" value="&#x254;&#x2d0;" onclick="letteroo()"></input>
+			<input type="button" class="small" name="u&#x2d0;" value="u&#x2d0;" onclick="letteruu()"></input>
+			<input type="button" class="small" name="&#x2c8;" value="&#x2c8;" onclick="letterApostrofo()"></input>
+		</center>
+		<center>
+			<input type="button" class="small" name="a" value="a" onclick="lettera()"></input>
+			<input type="button" class="small" name="&#xe6;" value="&#xe6;" onclick="letterAE()"></input>
+			<input type="button" class="small" name="&#x28c;" value="&#x28c;" onclick="letterA()"></input>
+			<input type="button" class="small" name="e" value="e" onclick="letterE()"></input>
+			<input type="button" class="small" name="&#x259;" value="&#x259;" onclick="letterschwa()"></input>
+			<input type="button" class="small" name="&#x26A;" value="&#x26A;" onclick="letterbitch()"></input>
+			<input type="button" class="small" name="i" value="i" onclick="letterI()"></input>
+			<input type="button" class="small" name="&#x254;" value="&#x254;" onclick="letterO()"></input>
+			<input type="button" class="small" name="&#x252;" value="&#x252;" onclick="letterOO()"></input>
+			<input type="button" class="small" name="&#x28a;" value="&#x28a;" onclick="lettershould()"></input>
+			
+		</center>
+
+		</p>
+
+		
+		<hr></hr>
+			<center>
+				<p>Developed by Sergio Martinelli</p>
+				<p>Contact email: sergio.martinelli.EPQ@gmail.com</p>
+			</center>
+		
+
+
+	</body>
+
+
+
+
+</html>
