@@ -18,7 +18,10 @@ function nexttranscription() {
 			return Math.floor(Math.random() * (3511 - 1) ) + 1;	
 		}
 		index = RndNumber();
-		document.getElementById("transcription").innerHTML = trans[index];
+		document.getElementById("transcription").innerHTML = "/";
+		document.getElementById("transcription").innerHTML += trans[index];
+		document.getElementById("transcription").innerHTML += "/";
+
 
 
 //save the current word and transcription in the prev[]-prevtrans[] arrays
@@ -47,7 +50,9 @@ function previoustranscription() {
 	} else {
 	counter--;
 	document.getElementById("transcriptionshown").innerHTML = prev[counter];
-	document.getElementById("transcription").innerHTML = prevtrans[counter];
+	document.getElementById("transcription").innerHTML = "/";
+	document.getElementById("transcription").innerHTML += prevtrans[counter];
+	document.getElementById("transcription").innerHTML += "/";
 	document.getElementById("transcriptionshown").style.visibility = "visible";
 	document.getElementById("transcriptionshown").className = "wrong";
 	
