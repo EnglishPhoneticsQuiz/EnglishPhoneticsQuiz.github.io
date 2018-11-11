@@ -5,9 +5,19 @@ function letterP() {
 	document.getElementById("writeaword").innerHTML += 'p';
 }};
 
+function letterQ() {
+	if ( document.getElementById("writeaword").innerHTML == "&nbsp;") {document.getElementById("writeaword").innerHTML = 'b'; } else {
+	document.getElementById("writeaword").innerHTML += 'q';
+}};
+
 function letterB() {
 	if ( document.getElementById("writeaword").innerHTML == "&nbsp;") {document.getElementById("writeaword").innerHTML = 'b'; } else {
 	document.getElementById("writeaword").innerHTML += 'b';
+}};
+
+function letterC() {
+	if ( document.getElementById("writeaword").innerHTML == "&nbsp;") {document.getElementById("writeaword").innerHTML = 'c'; } else {
+	document.getElementById("writeaword").innerHTML += 'c';
 }};
 
 function letterT() {
@@ -70,6 +80,18 @@ function letterJ() {
 function letterW() {
 	if ( document.getElementById("writeaword").innerHTML == "&nbsp;") {document.getElementById("writeaword").innerHTML = 'w'; } else {
 	document.getElementById("writeaword").innerHTML += 'w';
+}};
+function letterX() {
+	if ( document.getElementById("writeaword").innerHTML == "&nbsp;") {document.getElementById("writeaword").innerHTML = 'w'; } else {
+	document.getElementById("writeaword").innerHTML += 'x';
+}};
+function letterY() {
+	if ( document.getElementById("writeaword").innerHTML == "&nbsp;") {document.getElementById("writeaword").innerHTML = 'w'; } else {
+	document.getElementById("writeaword").innerHTML += 'y';
+}};
+function letterZ() {
+	if ( document.getElementById("writeaword").innerHTML == "&nbsp;") {document.getElementById("writeaword").innerHTML = 'w'; } else {
+	document.getElementById("writeaword").innerHTML += 'z';
 }};
 
 function lettera() {
